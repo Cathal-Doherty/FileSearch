@@ -1,0 +1,42 @@
+﻿<Window x:Class="FileSearch.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileSearch"
+        mc:Ignorable="d"
+        Title="FileSearch" Height="700" Width="1000" FontSize="25">
+   
+    <Grid>
+        <!--Column and Row properties-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+
+         
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+
+        </Grid.RowDefinitions>
+        <!--1st Row-->
+        <TextBlock Grid.Column ="1" Grid.Row="1" Text="FileSearch"></TextBlock>
+        <TextBlock Grid.Column ="3" Grid.Row="1" Text="Choose a CSV file"></TextBlock>
+        <!--2nd Row-->
+        <TextBlock Grid.Column ="1" Grid.Row="2" Text="File Location" Margin="0,10"></TextBlock>
+        <TextBox x:Name="txtbFileLoc" Grid.Column="2" Grid.Row="2" Text="" Grid.ColumnSpan="2"></TextBox>
+        <Button x:Name="btnBF" Grid.Column="4" Grid.Row="2" Click="btnBF_Click" Content="Browse File"></Button>
+        
+        <!--3rd Row-->
+        <DataGrid x:Name="dgInfo" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="3"/>
+        <Button x:Name="btnFD" Grid.Column="1" Grid.Row="3" Content="File Data" Click="btnFD_Click"></Button>
+    </Grid>
+</Window>
